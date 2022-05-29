@@ -16,6 +16,7 @@
         Enter Employee Details 
         Name:<input type="text" placeholder="Name" name="ename">
         Phone:<input type="number" placeholder="Phone Number" name="phone">
+        Password:<input type="text" placeholder="Password" name="password">
         Role:<select name="role">
             <?php
                 $sql="select * from roles";
@@ -37,11 +38,22 @@
 <?php
     $name = $phone = $role='';
     if($_SERVER["REQUEST_METHOD"]=="POST"){
-        $name=$_POST["name"];
+        $name=$_POST["ename"];
         $phone=$_POST["phone"];
+        $password=$_POST["ename"];
         $role=$_POST["role"];
-        echo "$name,$phone,$role";
-        $sql = "insert into employee values('$name','$phone','$role')"
-        if($result = mysqli_query($sql))
+        $id = mysqli_fetch_row(mysqli_query($conn,"select max(id) from employees"));
+        echo "$name,$phone,$role,$id[0]";
+        
+        if($id==''){
+            $id = 0;
+        }
+        
+        $id = $id[0]+1;
+        $sql = "insert into employees values('$name','$id','$phone','$role','$password')";
+        
+        if($result = mysqli_query($conn,$sql)){
+            echo "Inserted Successfully"; 
+        }
     }
-?>
+?>  
