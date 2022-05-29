@@ -8,16 +8,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add Employe</title>
+    <title>Add Employee</title>
 </head>
 <body>
     
     <form method="post" action="#" >
-        Enter Employee Details 
-        Name:<input type="text" placeholder="Name" name="ename">
-        Phone:<input type="number" placeholder="Phone Number" name="phone">
-        Password:<input type="text" placeholder="Password" name="password">
-        Role:<select name="role">
+        Enter Employee Details <br><br>
+        Name:<input type="text" placeholder="Name" name="ename" required><br>
+        Phone:<input type="number" placeholder="Phone Number" name="phone" required><br>
+        Password:<input type="text" placeholder="Password" name="password" required><br>
+        Role:<select name="role" placeholder="Roles"><br><
             <?php
                 $sql="select * from roles";
                 if($result=mysqli_query($conn,$sql))
@@ -36,14 +36,14 @@
 </html>
 
 <?php
-    $name = $phone = $role='';
+    $ename = $phone = $role='';
     if($_SERVER["REQUEST_METHOD"]=="POST"){
-        $name=$_POST["ename"];
+        $ename=$_POST["ename"];
         $phone=$_POST["phone"];
         $password=$_POST["ename"];
         $role=$_POST["role"];
         $id = mysqli_fetch_row(mysqli_query($conn,"select max(id) from employees"));
-        echo "$name,$phone,$role,$id[0]";
+        echo "$ename,$phone,$role,$id[0]";
         
         if($id==''){
             $id = 0;
