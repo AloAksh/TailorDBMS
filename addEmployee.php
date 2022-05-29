@@ -23,7 +23,7 @@
                 {
                     while($row=mysqli_fetch_row($result))
                     {
-                        echo "<option value=$row[0]>$row[1]</option>"
+                        echo "<option value=$row[1]>$row[0]</option>";
                     }
                 }
             ?>
