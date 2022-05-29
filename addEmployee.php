@@ -41,5 +41,7 @@
         $phone=$_POST["phone"];
         $role=$_POST["role"];
         echo "$name,$phone,$role";
+        $sql = "insert into employee values('$name','$phone','$role')"
+        if($result = mysqli_query($sql))
     }
 ?>
