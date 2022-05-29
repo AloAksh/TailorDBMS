@@ -12,7 +12,7 @@
 </head>
 <body>
     
-    <form>
+    <form method="post" action="#" >
         Enter Employee Details 
         Name:<input type="text" placeholder="Name" name="ename">
         Phone:<input type="number" placeholder="Phone Number" name="phone">
@@ -28,7 +28,18 @@
                 }
             ?>
             </select>
+        <input type="submit"/>
     </form>
 
 </body>
 </html>
+
+<?php
+    $name = $phone = $role='';
+    if($_SERVER["REQUEST_METHOD"]=="POST"){
+        $name=$_POST["name"];
+        $phone=$_POST["phone"];
+        $role=$_POST["role"];
+        echo "$name,$phone,$role";
+    }
+?>
