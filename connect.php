@@ -1,12 +1,12 @@
 <?php
-  $servername ="localhost";
-  $username ="root";
-  $password ="";
+  $servername ="10.1.42.59";
+  $username ="admin";
+  $password ="admin";
   $dbname ="tailor";
 
 $conn =mysqli_connect($servername,$username,$password,$dbname);
 if($conn){
-  echo "Connection Success";
+  echo "";
 }
 else{
   die("connection failed".mysqli_connect_error());
