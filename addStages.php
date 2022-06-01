@@ -7,11 +7,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Add Stage</title>
 </head>
 <body>
     <form method="POST">
-        Enter the Name of the New Stage<br><br>
+        <h1>Create Stage</h1>
         Stage Name: <input type="text" placeholder="New Stage" name="sname" required><br>
         <br><br><input type="submit"><br>
 </body>

@@ -10,7 +10,7 @@ header{
     width: 100vm;
     height: 100px;
     font-family: 'Poppins';
-    /* background-color:indigo; */
+
 }
 
 header .inner{
@@ -53,23 +53,6 @@ header nav :hover{
   top:50%;
   text-align:center;
 }
-
-/* .sign {
- width: 200px;
- position:relative;
- height:100%;
- margin:auto;
- padding: 50px;
- background-color: rgb(69, 5, 114);
- border-radius: 10px;
- transform: translate(-50%,-50%);
- color: white;
-}
-
-.sign li{
-  color:#FFF
-} */
-
 
 
 /* Login page Styles */
