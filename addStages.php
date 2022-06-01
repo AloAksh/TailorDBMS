@@ -12,7 +12,7 @@
 <body>
     <form method="POST">
         Enter the Name of the New Stage<br><br>
-        Stage Name: <input type="text" placeholder="New Stage" name="sname" required><br><br>
+        Stage Name: <input type="text" placeholder="New Stage" name="sname" required><br>
         <br><br><input type="submit"><br>
 </body>
 </html>
@@ -29,7 +29,7 @@
             $id = 0;
         }
         $id = $id[0]+1;
-        $sql = "insert into stages values('$sname','$id')";
+        $sql = "insert into stages values('$id','$sname')";
         
         if($result = mysqli_query($conn,$sql)){
             echo "Inserted Successfully"; 
