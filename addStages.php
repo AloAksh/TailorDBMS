@@ -11,10 +11,15 @@
     <title>Add Stage</title>
 </head>
 <body>
-    <form method="POST">
-        <h1>Create Stage</h1>
-        Stage Name: <input type="text" placeholder="New Stage" name="sname" required><br>
-        <br><br><input type="submit"><br>
+    <div class="login-box">
+        <form method="POST">
+            <h1>Create Stage</h1>
+            <div class="textbox">
+                <input type="text" placeholder="New Stage" name="sname" required>
+            </div><br>
+            <input class="btn" type="submit">
+        </form>
+    </div>
 </body>
 </html>
 

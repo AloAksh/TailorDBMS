@@ -1,4 +1,4 @@
-/* Default styles for the browser */
+/* Default styles for the browser
 *{
     margin: 0;
     padding: 0;
@@ -52,7 +52,7 @@ header nav :hover{
   position: absolute;
   top:50%;
   text-align:center;
-}
+} */
 
 
 /* Login page Styles */

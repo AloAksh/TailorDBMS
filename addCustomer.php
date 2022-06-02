@@ -8,17 +8,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Add Customer</title>
 </head>
 <body>
-    <form method="post">
-        Enter Customer Details<br><br>
-        Name:<input type="text" placeholder="Customer Name" name="cname" required><br>
-        Phone:<input type="number" placeholder="Phone Number" name="phone" required> <br>
-        Address:<input type="text" placeholder="Address" name="address" required>
-        <br><br><input type="submit">
-    </form>
-    </body>
+    <div class="login-box">
+        <form method="post">
+                <h1>Customer Details</h1>
+                <div class="textbox">
+                    <input type="text" placeholder="Customer Name" name="cname" required>
+                </div>
+                <div class="textbox">
+                    <input type="number" placeholder="Phone Number" name="phone" required>
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="Address" name="address" required>
+                </div><br>
+                <input class="btn" type="submit">
+            </div>
+        </form>
+    </div>
+</body>
 </html>
 
 
