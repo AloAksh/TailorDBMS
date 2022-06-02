@@ -7,12 +7,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Add Stage</title>
 </head>
 <body>
     <form method="POST">
-        Enter the Name of the New Stage<br><br>
-        Stage Name: <input type="text" placeholder="New Stage" name="sname" required><br><br>
+        <h1>Create Stage</h1>
+        Stage Name: <input type="text" placeholder="New Stage" name="sname" required><br>
         <br><br><input type="submit"><br>
 </body>
 </html>
@@ -29,7 +30,7 @@
             $id = 0;
         }
         $id = $id[0]+1;
-        $sql = "insert into stages values('$sname','$id')";
+        $sql = "insert into stages values('$id','$sname')";
         
         if($result = mysqli_query($conn,$sql)){
             echo "Inserted Successfully"; 

@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr ;
-    height: 85vh;
+    height: 70vh;
     column-gap: 3rem;
     row-gap: 3rem;
 }
@@ -12,16 +12,18 @@
     height: 100%;
     padding: 3rem;
     border-radius: 15px;
-    cursor: pointer;
-    background-color: rgb(39, 3, 64);
+    border-color: white;
+    background-color: rgb(69, 5, 114);
     color: white;
     font-size: larger;
     transition: all 0.5s ease-in-out;
 }
 
 .cell a button:hover{
-    background-color: rgb(118, 5, 199);
-    color:black;
+    background-color: rgb(69, 5, 114);
+    color: #4caf50;
+    cursor: pointer;
+    border-color: #317433;
     font-size: larger;
     margin: .75rem;
 }
@@ -35,8 +37,7 @@
 }
 
 .head .a{
-    color:white;
-    
+    color: #FFF;
     display: flex;
     justify-content: center;
     align-items: center;

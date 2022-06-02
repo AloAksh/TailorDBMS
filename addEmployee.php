@@ -1,3 +1,4 @@
+
 <?php
     include("connect.php")
 ?>
@@ -15,7 +16,7 @@
     <div class="login-box">
 
         <form method="post" action="#" >
-            <h1>Enter Employee Detials</h1>
+            <h1>Employee Details</h1>
             <div class="textbox">
                 <input type="text" placeholder="Name" name="ename" required>
             </div>
@@ -39,7 +40,6 @@
             <input class="btn" type="submit"/>
         </form>
     </div>
-
 </body>
 </html>
 
