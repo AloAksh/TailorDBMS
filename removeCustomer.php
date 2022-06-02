@@ -20,7 +20,7 @@
                 <input type="text" name="cname" placeholder="Customer Name">
             </div>
             <div class="textbox">
-                <input type="number" name="id" placeholder="Customer ID">
+                <input type="number" name="id" placeholder="Customer ID" required>
             </div><br>
             <input class="btn" type="submit">
         </form>

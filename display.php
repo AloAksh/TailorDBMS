@@ -42,7 +42,7 @@
         $display = "select * from $table";
         $title = "desc $table";
         $size = mysqli_fetch_row(mysqli_query($conn, "select count(*) FROM INFORMATION_SCHEMA.COLUMNS where table_schema = 'tailor' AND table_name = '$table'"));
-        $num = 0;
+        
         if($result  = mysqli_query($conn,$display)){
             echo"<table border=1>"; 
             if($res=mysqli_query($conn,$title)){
@@ -53,11 +53,10 @@
                 echo"</tr>";
             }
             
-            while($row=mysqli_fetch_array($result)){
-                echo"<tr>";
-                while($num<$size){
-                    echo"<td>"; echo $row[$num]; echo"</td>";
-                    $num=$num+1;
+            while($row=mysqli_fetch_row($result)){
+                echo"<tr>";            
+                for($num=0; $num<$size[0]; $num++){
+                    echo"<td>"; echo "$row[$num]"; echo"</td>";
                 }
                 echo"</tr>";
         }

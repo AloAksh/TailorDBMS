@@ -20,7 +20,7 @@
                 <input type="text" name="ename" placeholder="Employee Name">
             </div>
             <div class="textbox">
-                <input type="number" name="id" placeholder="Employee ID">
+                <input type="number" name="id" placeholder="Employee ID" required>
             </div><br>
             <input class="btn" type="submit">
         </form>
