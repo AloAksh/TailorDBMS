@@ -1,5 +1,5 @@
 <?php
-  $servername ="10.1.42.59";
+  $servername ="10.1.42.3";
   $username ="admin";
   $password ="admin";
   $dbname ="tailor";
