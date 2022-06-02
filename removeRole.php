@@ -12,6 +12,7 @@
     <title>Remove Role</title>
 </head>
 <body>
+<a class="butn" type="submit" href="index.html" style="text-decoration: none; margin-bottom:100px;">HOME</a>
     <div class="login-box">
         <form method="POST">
             <h1>Remove<br>Role</h1>

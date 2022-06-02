@@ -12,7 +12,7 @@
     <title>Add Customer</title>
 </head>
 <body>
-    <a class="butn" type="submit" href="index.html" style="text-decoration: none; margin-bottom:100px;">HOME</button> 
+    <a class="butn" type="submit" href="index.html" style="text-decoration: none; margin-bottom:100px;">HOME</a>
     <div class="login-box">
         <form method="post">
                 <h1>Customer Details</h1>

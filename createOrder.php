@@ -9,10 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="addorder.css">
+    <link rel="stylesheet" href="style.css">
 
     <title>CreateOrder</title>
 </head>
 <body>
+<a class="butn" type="submit" href="index.html" style="text-decoration: none; margin-bottom:100px;">HOME</a>
     <div class="sec">
         <div class="form">
             <div class="title">
@@ -35,11 +37,11 @@
                     </select>
                 </div>
                 <div class="textbox">
-                    <label for="orderDate">Date of Order:</label>
-                    <input id="orderDate" type="date" placeholder="Date of order" name="orderDate"></input>
+                    <label for="orderDate">Order Date:</label>
+                    <input type="date" placeholder="Date of order" name="orderDate"></input>
                 </div>
                 <div class="textbox">
-                    <label for="orderDate">Due of Order:</label>
+                    <label for="orderDate">Due Date:</label>
                     <input id="orderDate" type="date" placeholder="Date of order" name="dueDate"></input>
                 </div>
                 <div class="textbox">
@@ -48,37 +50,7 @@
                 </div>
                 <div class="textbox">
                     <label for="w">Order Description:</label>
-                    <textarea id="w" placeholder="Description" name="desc" rows="10" cols="50"></textarea>
-                </div>
-                <div class="textbox">
-                    <label for="Stage">Order stage:</label>
-                    <select id="stage"  name="stage" placeholder="Stages">
-                        <?php
-                            $sql="select * from stages";
-                            if($result=mysqli_query($conn,$sql))
-                            {
-                                while($row=mysqli_fetch_row($result))
-                                {
-                                    echo "<option value=$row[0]>$row[1]</option>";
-                                }
-                            }
-                        ?>
-                    </select>
-                </div>
-                <div class="textbox">
-                    <label for="handler">Order Handler:</label>
-                    <select id="handler"  name="handler" placeholder="Roles">
-                        <?php
-                            $sql="select * from employees";
-                            if($result=mysqli_query($conn,$sql))
-                            {
-                                while($row=mysqli_fetch_row($result))
-                                {
-                                    echo "<option value=$row[1]>$row[0]</option>";
-                                }
-                            }
-                        ?>
-                    </select>
+                    <textarea id="w" placeholder="Description" name="desc" rows="6" cols="50"></textarea>
                 </div>
                 <input type="submit" class="btn">
             </form>
@@ -91,14 +63,15 @@
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
     $custid=$_POST["customer"];
-    $doo=$_POST["orderDate"];
+    $orderDate=$_POST["orderDate"];
     $dueDate=$_POST["dueDate"];
     $qty=$_POST["qty"];
-    $desc=$_POST["desc"];
-    $stage=$_POST["stage"];
-    $handler=$_POST["handler"];
+    $description=$_POST["desc"];
 
-    echo $custid,$doo,$dueDate,$qty,$desc,$stage,$handler;
+    $insert = "insert into orders (order_date, due, quantity, cust_id, description) values ($orderDate, $dueDate, $qty, $custid, $description)";
+    echo $custid,$orderDate,$dueDate,$qty,$description;
+    if($result = mysqli_query($conn, $insert)){
+    }
 }
 
 ?>

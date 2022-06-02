@@ -1,7 +1,7 @@
 <?php
-  $servername ="10.1.42.3";
-  $username ="admin";
-  $password ="admin";
+  $servername ="localhost";
+  $username ="root";
+  $password ="";
   $dbname ="tailor";
 
 $conn =mysqli_connect($servername,$username,$password,$dbname);
