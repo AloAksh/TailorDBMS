@@ -15,7 +15,7 @@
     <div class="login-box">
         <form method="POST">
             <h1>Remove<br>Role</h1>
-            <div class="text-box">
+            <div class="textbox">
                 <select style="background: none; width: 80%; border: none; margin:0 8px;font-size: 18px;color: grey;" name="id" placeholder="Role">
                 <?php 
                     $sql="select * from roles";
